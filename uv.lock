@@ -2,6 +2,18 @@ version = 1
 requires-python = ">=3.11"
 
 [[package]]
+name = "coolbasics"
+version = "0.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/15/de/0f7e5107d21d3fb8afb7eb99dd8dd2eae9977c2f89c766bdc82ed129b0fb/coolBasics-0.1.tar.gz", hash = "sha256:248de38ae0e5f52f31d4c8a86efb8520e31d4684f922d0f0c7ede99d912ed281", size = 1313 }
+
+[[package]]
 name = "python-template"
 version = "0.1.0"
 source = { virtual = "." }
+dependencies = [
+    { name = "coolbasics" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "coolbasics", specifier = ">=0.1" }]
